@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Define document encoding and scaling for mobile devices -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RJCJ IT Home Page">
+  <meta name="keywords" content="RJCJ IT, Job, Application, Opportunities, Home">
+  <meta name="author" content="JG, RS, JP, CM">
+  
+  <!-- Title for browser tab -->
+  <title>Apply - RJCJ IT Careers</title>
+
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ====================== HEADER SECTION ====================== -->
+  <header>
+    <div>
+      <figure id="image1">
+          <a href="images/rjcj.png">  <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb" style="width:100px; height:auto;"></a>
+      </figure>
+    </div>
+    <!-- Main heading of the page -->
+    <h1>Apply for a Position at RJCJ IT</h1>
+
+    <!-- Navigation bar linking to other pages -->
+    <nav>
+      <ul class="nav-menu">
+        <!-- Each list item links to a separate page -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Job Descriptions</a></li>
+        <li><a href="apply.html">Apply Now</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mailto:info@rjcj.com.au">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====================== MAIN SECTION ====================== -->
+  <main>
+    <!-- Start of the job application form -->
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+
+      <!-- Dropdown menu to select the job being applied for -->
+      <label for="ref">Job Reference Number:</label>
+      <select id="ref" name="ref" required>
+        <option value="">--Select--</option>
+        <option value="IT5T9">IT Support Technician</option>
+        <option value="SW3NG">Software Engineer</option>
+      </select><br><br>
+
+      <!-- Text field for entering first name -->
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" maxlength="20" required><br><br>
+
+      <!-- Text field for entering last name -->
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" maxlength="20" required><br><br>
+
+      <!-- Input for entering date of birth with pattern validation -->
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required><br><br>
+
+      <!-- Gender selection using radio buttons to allow one choice only -->
+      <fieldset>
+        <legend>Gender:</legend>
+        <!-- Male radio option -->
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <!-- Female radio option -->
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <!-- Other radio option -->
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+      </fieldset><br>
+
+      <!-- Text input for address -->
+      <label for="address">Street Address:</label>
+      <input type="text" id="address" name="address" maxlength="40" required><br><br>
+
+      <!-- Input for suburb or town name -->
+      <label for="suburb">Suburb/Town:</label>
+      <input type="text" id="suburb" name="suburb" maxlength="40" required><br><br>
+
+      <!-- Dropdown menu for selecting Australian state -->
+      <label for="state">State:</label>
+      <select id="state" name="state" required>
+        <option value="">--Select--</option>
+        <option value="VIC">VIC - Victoria</option>
+        <option value="NSW">NSW - New South Wales</option>
+        <option value="QLD">QLD - Queensland</option>
+        <option value="NT">NT - Northern Territory</option>
+        <option value="WA">WA - Western Australia</option>
+        <option value="SA">SA - South Australia</option>
+        <option value="TAS">TAS - Tasmania</option>
+        <option value="ACT">ACT - Australian Capital Territory</option>
+      </select><br><br>
+
+      <!-- Postcode input must be 4 digits only -->
+      <label for="postcode">Postcode:</label>
+      <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br><br>
+
+      <!-- Email input with validation pattern -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email"
+             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required><br><br>
+
+      <!-- Phone input allows digits and spaces -->
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,12}" required><br><br>
+
+      <!-- Multiple checkbox inputs for technical skills -->
+      <fieldset>
+        <legend>Technical Skills:</legend>
+        <!-- At least one required checkbox must be ticked -->
+        <input type="checkbox" name="skills" value="Windows" required> Windows
+        <input type="checkbox" name="skills" value="Linux"> Linux
+        <input type="checkbox" name="skills" value="Networking"> Networking
+        <input type="checkbox" name="skills" value="Scripting"> Scripting
+      </fieldset><br>
+
+      <!-- Textarea allows longer text input for other skills -->
+      <label for="otherskills">Other Skills:</label><br>
+      <textarea id="otherskills" name="otherskills" rows="4" cols="40" placeholder="e.g. Python, Docker, Team Leadership, Cloud Computing"></textarea><br><br>
+
+      <!-- Button to submit form data -->
+      <input type="submit" value="Apply">
+    </form>
+  </main>
+
+  <!-- ====================== FOOTER SECTION ====================== -->
+  <footer>
+    <!-- Company name and copyright -->
+    <div>&copy; 2025 RJCJ Technologies</div>
+    <!-- Jira project tracking link -->
+      <div><a href="https://jericho06.atlassian.net/jira/software/projects/RJCJ/summary" style="color: #fa269e; text-decoration: none;" target="_blank">Jira Project</a></div>
+  </footer>
+
+</body>
+</html>
