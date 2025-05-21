@@ -1,8 +1,12 @@
 <?php
+if (!defined('ALLOW_SETTINGS')) {
+    die('Direct access not permitted.');
+}
+
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "Group05"; // Replace with your actual DB name
+$database = "Group05";
 
 $conn = mysqli_connect($host, $username, $password, $database);
 
