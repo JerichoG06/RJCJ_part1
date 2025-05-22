@@ -9,7 +9,10 @@ description: [index.html]
 /* Center the entire header content */
 header {
   text-align: center;
-  padding: 1em;
+  padding: 3em 1em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Center navigation items horizontally */
@@ -23,20 +26,40 @@ nav {
 /* Style menu paragraphs inline */
 nav .menu {
   margin: 0;
+  text-align: center;
 }
 
 /* Spacing under h1 */
 header h1 {
+  font-size: 3em;
+  margin-top: 0.2em;
   margin-bottom: 0.5em;
 }
 
 /* General Reset and Typography */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #0f0f0f;
     color: #ffffff;
     line-height: 1.6;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.6em;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #eaeaea;
 }
 
 a {
