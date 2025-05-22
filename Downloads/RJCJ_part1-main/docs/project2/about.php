@@ -69,4 +69,4 @@
       <p><strong>Hometowns:</strong> Jericho: Werribee, Rishon: Caufield, Jamin: Dandenong, Collins: Footscray</p>
     </section>
 </main>
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 2em auto;" />
+

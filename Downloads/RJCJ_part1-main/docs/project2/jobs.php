@@ -1,7 +1,5 @@
 <?php include("includes/navbar.inc"); ?>
 
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
-
 <main style="padding: 2em; max-width: 900px; margin: auto;">
     <!DOCTYPE html>
     <html lang="en">
@@ -172,4 +170,3 @@
     </body>
     </html>
 </main>
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 2em auto;" />
