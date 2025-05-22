@@ -49,7 +49,7 @@
                     <br>
                     <div class="JD">
                         <p>RJCJ is seeking a reliable and technically skilled IT Support Technician to provide front-line support to end-users, troubleshoot hardware and software issues, and ensure the smooth daily operation of IT systems across the organization.</p>
-                        <p>The annual salary range is from $55,000-$68,000 AUD and you will report to your senor IT manager; Jordan Blake</p>
+                        <p>The annual salary range is from $55,000-$68,000 AUD and you will report to your senior IT manager; Jordan Blake</p>
                     </div>
                     <aside class="KR">
                         <p>Key Responsibilities</p>
@@ -71,7 +71,7 @@
                         <ul>
                             <li>Certificate IV or higher in Information Technology or a related field</li>
                             <li>Minimum 1 year experience in an IT support/helpdesk role</li>
-                            <li>Strong knowledge of Windows and macOS operating systems</li>
+                            <li>Strong knowledge of Windows, Linux and macOS operating systems</li>
                             <li>Familiarity with Microsoft Office Suite and basic networking concepts</li>
                             <li>Excellent problem-solving skills and attention to detail</li>
                             <li>Good communication and interpersonal skills</li>
@@ -100,7 +100,7 @@
                     <br>
                     <div class="JD cybersecurity">
                         <p>We are seeking a proactive and highly skilled Cybersecurity Specialist to join our team. This role is vital in protecting our digital assets, ensuring the confidentiality, integrity, and availability of our systems and data.</p>
-                        <p>The annual salary range is from £42,000 – £60,000 AUD and you will report to the Head of Information Security; Riley Chen</p>
+                        <p>The annual salary range is from $42,000 – $60,000 AUD and you will report to the Head of Information Security; Riley Chen</p>
                     </div>
                     <aside class="KR">
                         <p>Key Responsibilities</p>

@@ -1,3 +1,4 @@
+<?php include("includes/header.inc"); ?>
 <?php include("includes/navbar.inc"); ?>
 
 <hr class="section-divider" />

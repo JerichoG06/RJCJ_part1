@@ -1,4 +1,6 @@
+<?php include("includes/header.inc"); ?>
 <?php include("includes/navbar.inc"); ?>
+<?php include("includes/logo.inc"); ?>
 
 <main>
     <!DOCTYPE html>
@@ -9,7 +11,6 @@
       <meta name="description" content="RJCJ IT Home Page">
       <meta name="keywords" content="RJCJ IT, Job, Application, Opportunities, Home">
       <meta name="author" content="JG, RS, JP, CM">
-      <title>RJCJ IT</title>
       <link rel="stylesheet" type="text/css" href="styles/styles.css">
     </head>
 
@@ -19,17 +20,15 @@
       <div class="container site-header">
         <!-- Website header containing logo, navigation, and intro message -->
         <header>
-          
-          <!-- Logo image wrapped in a clickable link -->
+
           <figure class="logo">
             <a href="images/rjcj.png">
               <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
             </a>
           </figure>
-
+          
           <!-- Main site title -->
           <h1 class="headline">RJCJ IT</h1>
-
           <hr>
           <p class="subtext"><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>
         </header>
