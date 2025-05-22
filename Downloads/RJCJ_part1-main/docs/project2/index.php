@@ -1,9 +1,6 @@
-<?php include("includes/header.inc"); ?>
 <?php include("includes/navbar.inc"); ?>
 
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
-
-<main style="padding: 2em; max-width: 900px; margin: auto;">
+<main>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -14,39 +11,33 @@
       <meta name="author" content="JG, RS, JP, CM">
       <title>RJCJ IT</title>
       <link rel="stylesheet" type="text/css" href="styles/styles.css">
-      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     </head>
 
     <!-- Set global body styling with font, background color, and text color -->
-    <body style="margin: 0; font-family: 'Orbitron', sans-serif; background: #f4f4f4; color: #222;">
+    <body>
 
       <!-- Website header containing logo, navigation, and intro message -->
-      <header style="background-color: #0401BE; color: white; padding: 1em; text-align: center;">
+      <header>
         
         <!-- Logo image wrapped in a clickable link -->
-        <figure style="margin: 0;">
-          <a href="images/rjcj.png"> <!-- Links to the image file, so when clicked, it opens the image -->
-            <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb" style="width: 75px; height: auto;"> <!-- Displays the RJCJ logo, with a specified width and auto height, and provides an alternative text and title for the image -->
+        <figure class="logo">
+          <a href="images/rjcj.png">
+            <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
           </a>
         </figure>
 
         <!-- Main site title -->
-        <h1 style="margin: 0.5em 0;">RJCJ IT</h1>
-        <nav style="margin: 1em 0;">
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="index.php" style="color: #fa269e; text-decoration: none;">Home</a></p>
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="jobs.php" style="color: #fa269e; text-decoration: none;">Job Descriptions</a></p>
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="apply.php" style="color: #fa269e; text-decoration: none;">Apply Now</a></p>
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="about.php" style="color: #fa269e; text-decoration: none;">About</a></p>
-        </nav>
-        <hr style="border: none; border-top: 1px solid #fa269e; width: 80%; margin: auto;">
-        <p style="margin-top: 1em;"><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>
+        <h1>RJCJ IT</h1>
+
+        <hr>
+        <p><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>
       </header>
 
       <!-- Main content section with history description -->
-      <main style="padding: 2em; max-width: 900px; margin: auto;">
+      <main>
         <section>
           <!-- Section title -->
-          <h2 style="color: #0401BE;">Our History</h2>
+          <h2>Our History</h2>
 
           <!-- Paragraph describing company background and growth -->
           <p>
@@ -55,16 +46,27 @@
         </section>
       </main>
 
-      <footer style="background: radial-gradient(circle at center, #0401BE, #000000); color: whitesmoke; text-align: center; padding: 1em 0; margin-top: auto;">
+      <script>
+        window.addEventListener('scroll', () => {
+          const arrow = document.body;
+          if (window.scrollY > 50) {
+            arrow.style.setProperty('--scroll-indicator-opacity', '0');
+            document.body.style.setProperty('opacity', '1'); // Ensure full visibility
+            document.body.style.setProperty('scroll-behavior', 'smooth');
+            document.body.style.setProperty('--scroll-indicator-visibility', 'hidden');
+          }
+        });
+      </script>
+
+      <footer>
         <div>
           <div>&copy; 2025 RJCJ Technologies</div>
-          <div><a href="https://jericho06.atlassian.net/jira/software/projects/RJCJ/summary" style="color: #fa269e; text-decoration: none;" target="_blank">Jira Project</a></div>
-          <div><a href="https://github.com/JerichoG06/RJCJ_part1" style="color: #fa269e; text-decoration: none;" target="_blank">GitHub</a></div>
-          <div><a href="https://jerichog06.github.io/RJCJ_part1/" style="color: #fa269e; text-decoration: none;" target="_blank">Live Site</a></div>
+          <div><a href="https://jericho06.atlassian.net/jira/software/projects/RJCJ/summary" target="_blank">Jira Project</a></div>
+          <div><a href="https://github.com/JerichoG06/RJCJ_part1" target="_blank">GitHub</a></div>
+          <div><a href="https://jerichog06.github.io/RJCJ_part1/" target="_blank">Live Site</a></div>
         </div>
       </footer>
     </body>
     </html>
 </main>
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 2em auto;" />
 <?php include("includes/footer.inc"); ?>

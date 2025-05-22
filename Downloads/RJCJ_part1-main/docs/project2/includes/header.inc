@@ -8,10 +8,7 @@
   <meta name="author" content="JG, RS, JP, CM">
   <title>About Our Group</title>
   <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
 </head>
-<body style="margin: 0; font-family: 'Orbitron', sans-serif; background: #f4f4f4; color: #222;">
-  <header style="background-color: #0401BE; color: white; padding: 1.5em; text-align: center;">
     <div>
       <figure id="image1">
         <a href="images/rjcj.png">

@@ -2,202 +2,230 @@
 filename: [styles.css]
 author: [JG, RS, JP, CM]
 created: [10/04/2025]
-last modified: [14/04/2025]
-description: [index.html]
+last modified: [22/05/2025]
+description: [Redesigned with seamless and elegant Apple-like UI aesthetics]
 */
+
+
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    --highlight-color: lightcoral; /* Soft, complementary red for hover and emphasis */
+}
+
+/* Scroll indicator variables */
+:root {
+    --scroll-indicator-opacity: 1;
+    --scroll-indicator-visibility: visible;
+}
+
 body {
-    margin: 0; /* Removes any default margin around the body */
-    font-family: 'Orbitron', sans-serif; /* Applies the 'Orbitron' font (from Google Fonts) and falls back to sans-serif if unavailable */
-    background-color: #121212; /* Sets the background color of the webpage */
-    color: white; /* Changes the text color to white */
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #000;
+    text-align: center;
 }
+
+h2 {
+    margin-top: 10px;
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 54px;
+}
+
+a, a:hover, a:focus {
+    color: #007aff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #0051a8;
+}
+
+strong {
+    font-weight: 700;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Added styles for project-specific selectors */
+
 header {
-    border: 1px solid darkgray; /* Adds border around the header */
-    margin: 0.5em;
-    padding: 1em; /* Adds padding inside the header for spacing */
-    background: radial-gradient(circle at center, #0401BE, #000000); /* Applies a radial gradient background, transitioning from #0401BE (blue) to #000000 (black) */
-    text-align: center; /* Centers the text within the header */
-    color:#DC7A5F; 
-    text-shadow: 0 0 20px #DC7A5F; /* Adds a glowing text effect */
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
-#image1{
-    position: absolute; /* Positions the image absolutely, relative to the nearest positioned ancestor */
-    top: 0;
-    left: 0; /* Positions the image at the top-left corner of its containing element */
-    width: 100px; /* Sets the width of the image, maintaining its aspect ratio */
-    height: auto; /* Automatically adjusts the height to maintain the image's aspect ratio */
-    margin: 10px;
-}
+
 .nav-menu {
-    display: flex; /* Uses flexbox to lay out the items in a row */
-    justify-content: center; /* Center items instead of spreading */
-    gap: 12px; /* Small gap between each item */
-    list-style: none; /* Removes the default bullet points from the list items */
+    display: flex; /* Flex layout for horizontal menu */
+    justify-content: center; /* Center the nav items */
+    gap: 12px; /* Space between links */
+    list-style: none; /* Remove bullets */
     margin: 0;
     padding: 0;
 }
-  
-/* Each menu link */
+
 .nav-menu a {
-    color: azure;
-    text-decoration: none; /* Removes the default underline from the links */
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none; /* No underline */
     padding: 0.5em 1em;
     border: 3px solid #ccc;
-    border-radius: 8px; /* Rounds the corners of the border */
-    transition: background-color 0.3s, border-color 0.3s; /* Adds a smooth transition effect for the background color and border color */
+    border-radius: 8px;
     position: relative;
     display: inline-block;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
-  
-/* Underline animation base (hidden by default) */
+
 .nav-menu a::after {
-    content: ''; /* Empty content for the pseudo-element (used purely for styling) */
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0; /* Positions the pseudo-element at the bottom of the link */
+    bottom: 0;
     left: 0;
     background-color: lightblue;
-    transform: scaleX(0); /* Initially sets the scale of the pseudo-element to 0 on the X-axis (making it invisible) */
-    transform-origin: bottom right;  /* Defines the point from which the scaling will happen (bottom right corner) */
-    transition: transform 0.25s ease-out; /* Adds a smooth transition effect when the scale of the pseudo-element changes */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
-  
-/* Hover style */
-.nav-menu a:hover {
+
+.nav-menu a:hover,
+.nav-menu a:focus {
     background-color: lightblue;
     border-color: darkblue;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the link to give it a lifted appearance */
-    text-shadow: 0 0 8px lightblue, 0 0 12px lightblue; /* Applies a glowing text effect using light blue shadows */
+    color: #000; /* Optional: change text color on hover for better contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 8px lightblue, 0 0 12px lightblue;
 }
-/* Underline reveal on hover */
-.nav-menu a:hover::after {
-    transform: scaleX(1); /* Expands the underline to full width by scaling it on the X-axis */
-    transform-origin: bottom left;  /* Changes the transform origin so the underline grows from left to right */
+
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
-footer {
-    background: radial-gradient(circle at center, #0401BE, #000000);
-    color: white;
-    text-align: center;
-    padding: 1em;
-    bottom: 0;
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#WTG, #Jintro, .JD, .KR, .RQSKAE, .RQSKAP {
+    margin: 20px 0;
+    padding: 10px;
+    color: #333;
+}
+
+.interests-table {
     width: 100%;
-    font-size:small;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-footer a {
-    color: #fa269e;
-    text-decoration: none;
-}
-#Jintro{
-    font-weight:bold;
-    text-align:left;
-    color: #DC7A5F;
-    text-shadow: 0 0 0;
-    font-size:medium;
-}
-#WTG{
-    border: 4px inset lightblue; /* Adds a 3D inset border with a light blue color */
-    border-radius: 14px;
-    margin: 0.864em;
-    padding: 0.864em;
-    width:25%;
-    float:right; /* Floats the element to the right side */
-    box-shadow: 10px 10px 5px azure;
-    color: #e8d902;
-    font-size: small;
-}
-.JD{
-    color: #14fff7;
-    text-shadow: 0 0 0;
-    font-size: small;
-}
-.KR{
-    border: 4px inset lightblue;
-    border-radius: 14px;
-    margin: 20px auto;
-    padding: 15px;
-    width:60%;
-    text-align:center;
-    box-shadow: 10px 10px 5px azure;
-    color: #e8d902;
-    font-size:13px;
-}
-.RQSKAE{
-    border: 4px inset lightblue;
-    border-radius: 14px;
-    margin: 0.864em;
-    padding: 0.864em;
-    width:45%;
-    height:192px;
-    float:left;
-    box-shadow: 10px 10px 5px azure;
-    color: #e8d902;
-    font-size:13px;
-}
-.RQSKAP{
-    border: 4px inset lightblue;
-    border-radius: 14px;
-    margin: 0.864em;
-    padding: 0.864em;
-    width:45%;
-    height:192px;
-    float:right;
-    box-shadow: 10px 10px 5px azure;
-    color: #e8d902;
-    font-size:14px;
+.interests-table th, .interests-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* Space between each input block */
-  padding: 2rem;
-  background-color: #1e1e1e;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 2rem auto; /* Center the form horizontally */
-  box-shadow: 0 0 15px rgba(0, 255, 128, 0.3); /* Soft glow around form */
+.group-photo {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
 }
 
-/* === LABELS AND LEGENDS === */
-/* Makes labels and fieldset legends bold and spaced slightly from the next element. */
-form label, form legend {
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* === TEXT INPUTS, DROPDOWNS, AND TEXTAREAS === */
-/* Adds padding and styling to inputs for better readability and usability. */
-form input, form select, form textarea {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
-  color: #000;
+footer {
+    margin-top: 60px;
+    padding: 20px 0 15px 0;
+    background-color: #f8f8f8;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
 }
 
-/* === RADIO AND CHECKBOX STYLING === */
-/* Adds spacing between checkboxes/radios and their labels. */
-fieldset input[type="radio"], fieldset input[type="checkbox"] {
-  margin-right: 0.5rem;
+.centered {
+    text-align: center;
 }
 
-/* === SUBMIT BUTTON STYLING === */
-/* Styles the 'Apply' button with background color, padding, and hover effect. */
-input[type="submit"] {
-  background-color: #2ecc71;
-  color: white;
-  font-size: 1.1rem;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.section-divider {
+    height: 2px;
+    background-color: #007aff;
+    margin: 40px auto;
+    max-width: 100px;
 }
 
-/* Changes button color slightly on hover for interaction feedback. */
-input[type="submit"]:hover {
-  background-color: #27ae60;
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body::after {
+    content: "▼";
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: var(--highlight-color);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1.8s infinite ease-in-out;
+    opacity: var(--scroll-indicator-opacity, 1);
+    visibility: var(--scroll-indicator-visibility, visible);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); opacity: 0.5; }
+    50% { transform: translate(-50%, -10px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body::after {
+    will-change: opacity, transform;
+  }
 }
