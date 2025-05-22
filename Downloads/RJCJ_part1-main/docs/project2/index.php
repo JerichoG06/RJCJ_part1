@@ -16,34 +16,40 @@
     <!-- Set global body styling with font, background color, and text color -->
     <body>
 
-      <!-- Website header containing logo, navigation, and intro message -->
-      <header>
-        
-        <!-- Logo image wrapped in a clickable link -->
-        <figure class="logo">
-          <a href="images/rjcj.png">
-            <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
-          </a>
-        </figure>
+      <div class="container site-header">
+        <!-- Website header containing logo, navigation, and intro message -->
+        <header>
+          
+          <!-- Logo image wrapped in a clickable link -->
+          <figure class="logo">
+            <a href="images/rjcj.png">
+              <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
+            </a>
+          </figure>
 
-        <!-- Main site title -->
-        <h1>RJCJ IT</h1>
+          <!-- Main site title -->
+          <h1 class="headline">RJCJ IT</h1>
 
-        <hr>
-        <p><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>
-      </header>
+          <hr>
+          <p class="subtext"><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>
+        </header>
+      </div>
+
+      <hr class="section-divider">
 
       <!-- Main content section with history description -->
       <main>
-        <section>
-          <!-- Section title -->
-          <h2>Our History</h2>
+        <div class="container main-content">
+          <section>
+            <!-- Section title -->
+            <h2 class="section-title">Our History</h2>
 
-          <!-- Paragraph describing company background and growth -->
-          <p>
-            Founded in 2021 by a group of passionate technology students, RJCJ began as a small freelance collective offering tech support to local businesses. Over time, our reputation for reliability, innovation, and friendly service helped us grow into a respected IT solutions company. Today, RJCJ continues to evolve, combining deep technical expertise with a people-first approach to solve real-world challenges and support clients across various industries.
-          </p>
-        </section>
+            <!-- Paragraph describing company background and growth -->
+            <p class="lead-paragraph">
+              Founded in 2021 by a group of passionate technology students, RJCJ began as a small freelance collective offering tech support to local businesses. Over time, our reputation for reliability, innovation, and friendly service helped us grow into a respected IT solutions company. Today, RJCJ continues to evolve, combining deep technical expertise with a people-first approach to solve real-world challenges and support clients across various industries.
+            </p>
+          </section>
+        </div>
       </main>
 
       <script>

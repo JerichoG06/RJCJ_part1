@@ -63,6 +63,12 @@ header {
     background-color: #f8f8f8;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
+    overflow: visible; /* Ensures content like logo isn't clipped */
+}
+
+.site-header {
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu {
@@ -74,17 +80,19 @@ header {
     padding: 0;
 }
 
+/* Navbar-specific typography enhancement */
 .nav-menu a {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    color: #222;
     text-decoration: none; /* No underline */
     padding: 0.5em 1em;
     border: 3px solid #ccc;
     border-radius: 8px;
     position: relative;
     display: inline-block;
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.2s cubic-bezier(0.4,0,0.2,1);
 }
 
 .nav-menu a::after {
@@ -94,19 +102,20 @@ header {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: lightblue;
+    background-color: coral;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
+/* Enhanced navbar hover/focus effect */
 .nav-menu a:hover,
 .nav-menu a:focus {
-    background-color: lightblue;
-    border-color: darkblue;
-    color: #000; /* Optional: change text color on hover for better contrast */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-shadow: 0 0 8px lightblue, 0 0 12px lightblue;
+    background-color: rgba(240, 128, 128, 0.15); /* Light coral background */
+    border-color: lightcoral;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(240, 128, 128, 0.3);
+    transform: scale(1.05);
 }
 
 .nav-menu a:hover::after,
@@ -163,13 +172,40 @@ footer {
     text-align: center;
 }
 
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+footer div a {
+    color: #007aff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer div a:hover {
+    color: lightcoral;
+}
+
+@media (min-width: 600px) {
+    footer div {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+}
+
 .centered {
     text-align: center;
 }
 
-.section-divider {
+hr.section-divider {
     height: 2px;
-    background-color: #007aff;
+    background-color: transparent; /* or set to match your background */
+    border: none;
     margin: 40px auto;
     max-width: 100px;
 }
@@ -228,4 +264,113 @@ body::after {
   body::after {
     will-change: opacity, transform;
   }
+}
+
+/* Enhanced content block styling */
+section, #WTG, #Jintro, .JD, .KR, .RQSKAE, .RQSKAP {
+    font-size: 1.1rem;
+    background: linear-gradient(to bottom, #fafafa, #e8e8e8);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    margin: 20px auto;
+    line-height: 1.75;
+    max-width: 900px;
+}
+
+p, li, dd {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    padding: 0.5em 1.2em;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-left: 4px solid var(--highlight-color);
+    margin: 1.2em 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2, h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.section-title {
+    font-size: 2.2rem;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+}
+
+
+form {
+    background: linear-gradient(to bottom, #fefefe, #f0f0f0);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    font-size: 1.05rem;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label, form legend {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.3em;
+    color: #111;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 6px rgba(0, 122, 255, 0.2);
+    outline: none;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+form input[type="submit"] {
+    background-color: lightcoral;
+    color: white;
+    padding: 0.75em 2em;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e45858;
+    transform: scale(1.03);
 }
