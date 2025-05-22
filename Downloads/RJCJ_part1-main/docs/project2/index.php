@@ -16,7 +16,7 @@
     </head>
 
     <!-- Set global body styling with font, background color, and text color -->
-    <body style="margin: 0; font-family: 'Orbitron', sans-serif; background:rgb(220, 219, 246); color:rgb(70, 41, 237);">
+    <body style="margin: 0; font-family: 'Arail', sans-serif; background:rgb(220, 219, 246); color:rgb(1, 1, 2);">
 
       <!-- Website header containing logo, navigation, and intro message -->
       <header style="background-color: #0401BE; color: white; padding: 1em; text-align: center;">
