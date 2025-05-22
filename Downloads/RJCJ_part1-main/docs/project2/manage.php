@@ -9,7 +9,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Manage EOIs</titles>
+        <title>Manage EOIs</title>
     </head>
     <body>
         <h2>Manage EOIs</h2>
@@ -58,10 +58,10 @@
         if (isset($_POST['list_by_name'])){
             $fname = mysqli_real_escape_string($conn,$_POST['first_name']);
             $lname = mysqli_real_escape_string($conn,$_POST['last_name']);
-            $conditions = []
+            $conditions = [];
             if (!empty($fname)) $conditions[] = "first_name = '$fname'";
             if (!empty($lname)) $conditions[] = "last_name = '$lname'";
-            $where = implode(" AND ".$conditions);
+            $where = implode(" AND ", $conditions);
             $query = "SELECT * FROM eoi WHERE $where";
             $result = mysqli_query($conn, $query);
             showResults($result);
@@ -81,7 +81,7 @@
         if (isset($_POST['update_status'])){
             $eoi_num = mysqli_real_escape_string($conn, $_POST['eoi_number']);
             $new_status = mysqli_real_escape_string($conn, $_POST['new_status']);
-            $query = "UPDATE eoi SET status = '$new_status' WHERE EOInumber = '$eoi_number'";
+            $query = "UPDATE eoi SET status = '$new_status' WHERE EOInumber = '$eoi_num'";
             if (mysqli_query($conn, $query)){
                 echo "<p>Status updated for EOI: $eoi_num</p>";
             } else {
