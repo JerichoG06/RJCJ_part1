@@ -1,4 +1,3 @@
-<?php include("includes/header.inc"); ?>
 <?php include("includes/navbar.inc"); ?>
 
 <hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
@@ -174,4 +173,3 @@
     </html>
 </main>
 <hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 2em auto;" />
-<?php include("includes/footer.inc"); ?>
