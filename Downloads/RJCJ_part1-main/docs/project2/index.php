@@ -29,13 +29,6 @@
         <!-- Main site title -->
         <h1>RJCJ IT</h1>
 
-        <nav>
-          <p class="menu"><a href="index.php">Home</a></p>
-          <p class="menu"><a href="jobs.php">Job Descriptions</a></p>
-          <p class="menu"><a href="apply.php">Apply Now</a></p>
-          <p class="menu"><a href="about.php">About</a></p>
-        </nav>
-
         <hr>
         <p><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>
       </header>
