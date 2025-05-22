@@ -20,9 +20,9 @@
       <header>
         
         <!-- Logo image wrapped in a clickable link -->
-        <figure>
-          <a href="images/rjcj.png"> <!-- Links to the image file, so when clicked, it opens the image -->
-            <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb"> <!-- Displays the RJCJ logo, with a specified width and auto height, and provides an alternative text and title for the image -->
+        <figure class="logo">
+          <a href="images/rjcj.png">
+            <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
           </a>
         </figure>
 

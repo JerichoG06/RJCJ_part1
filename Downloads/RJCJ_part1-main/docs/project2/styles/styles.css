@@ -6,6 +6,30 @@ last modified: [14/04/2025]
 description: [index.html]
 */
 
+/* Center the entire header content */
+header {
+  text-align: center;
+  padding: 1em;
+}
+
+/* Center navigation items horizontally */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em; /* spacing between links */
+  flex-wrap: wrap;
+}
+
+/* Style menu paragraphs inline */
+nav .menu {
+  margin: 0;
+}
+
+/* Spacing under h1 */
+header h1 {
+  margin-bottom: 0.5em;
+}
+
 /* General Reset and Typography */
 body {
     margin: 0;
@@ -62,6 +86,17 @@ a:hover {
     padding: 1em;
     margin: 2em auto;
     max-width: 600px;
+}
+
+/* Logo */
+figure.logo {
+  text-align: center;
+  margin: 1em auto;
+}
+
+figure.logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Introduction */
