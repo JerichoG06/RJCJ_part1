@@ -8,7 +8,6 @@
   <meta name="author" content="JG, RS, JP, CM">
   <title>About Our Group</title>
   <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
 </head>
     <div>
       <figure id="image1">

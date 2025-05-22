@@ -12,7 +12,6 @@
       <meta name="author" content="JG, RS, JP, CM">
       <title>RJCJ IT</title>
       <link rel="stylesheet" type="text/css" href="styles/styles.css">
-      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     </head>
 
     <!-- Set global body styling with font, background color, and text color -->
