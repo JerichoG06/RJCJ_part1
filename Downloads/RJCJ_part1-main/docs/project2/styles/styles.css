@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-    --highlight-color: #e63946; /* Soft, complementary red for hover and emphasis */
+    --highlight-color: lightcoral; /* Soft, complementary red for hover and emphasis */
 }
 
 /* Scroll indicator variables */
@@ -65,37 +65,54 @@ header {
     transition: background-color 0.3s ease;
 }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .nav-menu {
-    list-style: none;
-    padding: 0;
+    display: flex; /* Flex layout for horizontal menu */
+    justify-content: center; /* Center the nav items */
+    gap: 12px; /* Space between links */
+    list-style: none; /* Remove bullets */
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2em; /* Added spacing between menu items */
-    transition: all 0.3s ease;
+    padding: 0;
 }
 
-.menu {
-    margin: 0 15px;
-    display: inline-block; /* Ensure spacing is respected */
+.nav-menu a {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none; /* No underline */
+    padding: 0.5em 1em;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-.menu a {
-    font-weight: 500;
-    font-size: 16px;
-    color: #007aff;
-    transition: color 0.3s ease, transform 0.3s cubic-bezier(.4,2,.6,1);
-    transform: scale(1);
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: lightblue;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
-.menu a:hover, .menu a:focus {
-    color: var(--highlight-color);
-    transform: scale(1.05);
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background-color: lightblue;
+    border-color: darkblue;
+    color: #000; /* Optional: change text color on hover for better contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 8px lightblue, 0 0 12px lightblue;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .logo {
@@ -212,4 +229,3 @@ body::after {
     will-change: opacity, transform;
   }
 }
-
