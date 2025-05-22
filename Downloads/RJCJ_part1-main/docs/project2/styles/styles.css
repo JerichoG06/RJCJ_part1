@@ -3,149 +3,170 @@ filename: [styles.css]
 author: [JG, RS, JP, CM]
 created: [10/04/2025]
 last modified: [22/05/2025]
-description: [Elegant, minimal stylesheet for RJCJ IT]
+description: [Redesigned with seamless and elegant Apple-like UI aesthetics]
 */
 
-/* Reset and Base Typography */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+html {
+    overflow-x: hidden;
 }
 
-html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #1a1a1a;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  text-align: center;
-  padding: 2.5em 1em 2em;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-header h1 {
-  font-size: 2.5em;
-  font-weight: 600;
-  margin-bottom: 0.25em;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  margin-top: 1em;
-}
-
-nav a {
-  color: #007aff;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 0.5em 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover,
-nav a:focus {
-  border-color: #007aff;
-}
-
-/* Main */
-main {
-  max-width: 900px;
-  margin: 3em auto;
-  padding: 0 1em;
-}
-
-/* Sections */
-section {
-  margin-bottom: 3em;
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #000;
+    text-align: center;
 }
 
 h2 {
-  font-size: 1.75em;
-  margin-bottom: 0.75em;
+    margin-top: 10px;
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 54px;
 }
 
-h3 {
-  font-size: 1.3em;
-  margin: 1.5em 0 0.5em;
+a, a:hover, a:focus {
+    color: #007aff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-p, ul, ol {
-  margin-bottom: 1em;
+a:hover, a:focus {
+    color: #0051a8;
 }
 
-/* Footer */
+strong {
+    font-weight: 700;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Added styles for project-specific selectors */
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    margin: 0 15px;
+}
+
+.menu a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #007aff;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover, .menu a:focus {
+    color: #0051a8;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#WTG, #Jintro, .JD, .KR, .RQSKAE, .RQSKAP {
+    margin: 20px 0;
+    padding: 10px;
+    color: #333;
+}
+
+.interests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.interests-table th, .interests-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.group-photo {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 footer {
-  text-align: center;
-  padding: 2em 1em;
-  background-color: #fafafa;
-  color: #777;
-  font-size: 0.9em;
-  border-top: 1px solid #e0e0e0;
+    margin-top: 60px;
+    padding: 20px 0 15px 0;
+    background-color: #f8f8f8;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
 }
 
-footer a {
-  color: #007aff;
-  text-decoration: none;
+.centered {
+    text-align: center;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.section-divider {
+    height: 2px;
+    background-color: #007aff;
+    margin: 40px auto;
+    max-width: 100px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1em;
-  }
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
 }
 
-/* Loading Screen */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 30px;
 }
 
-#loading-screen.fade-out {
-  opacity: 0;
-  pointer-events: none;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-#loading-screen h1 {
-  font-size: 1.5em;
-  color: #007aff;
-  font-weight: 500;
+body {
+  animation: fadeIn 1s ease-in;
 }
-
-/*
-Developer note:
-To enable the loading screen fade-out effect, add the following script at the bottom of your HTML <body>:
-<script>
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("loading-screen");
-    loader.classList.add("fade-out");
-    setTimeout(() => loader.style.display = "none", 500);
-  });
-</script>
-
-Also, include this HTML as the first element inside the <body> tag:
-<div id="loading-screen"><h1>Loading RJCJ IT...</h1></div>
-*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
