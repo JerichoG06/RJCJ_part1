@@ -1,5 +1,5 @@
 <?php include("includes/header.inc"); ?>
-<?php include("includes/menu.inc"); ?>
+<?php include("includes/navbar.inc"); ?>
 
 <hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
 
@@ -33,10 +33,10 @@
         <!-- Main site title -->
         <h1 style="margin: 0.5em 0;">RJCJ IT</h1>
         <nav style="margin: 1em 0;">
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="index.html" style="color: #fa269e; text-decoration: none;">Home</a></p>
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="jobs.html" style="color: #fa269e; text-decoration: none;">Job Descriptions</a></p>
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="apply.html" style="color: #fa269e; text-decoration: none;">Apply Now</a></p>
-          <p class="menu" style="display: inline; margin: 0 1em;"><a href="about.html" style="color: #fa269e; text-decoration: none;">About</a></p>
+          <p class="menu" style="display: inline; margin: 0 1em;"><a href="index.php" style="color: #fa269e; text-decoration: none;">Home</a></p>
+          <p class="menu" style="display: inline; margin: 0 1em;"><a href="jobs.php" style="color: #fa269e; text-decoration: none;">Job Descriptions</a></p>
+          <p class="menu" style="display: inline; margin: 0 1em;"><a href="apply.php" style="color: #fa269e; text-decoration: none;">Apply Now</a></p>
+          <p class="menu" style="display: inline; margin: 0 1em;"><a href="about.php" style="color: #fa269e; text-decoration: none;">About</a></p>
         </nav>
         <hr style="border: none; border-top: 1px solid #fa269e; width: 80%; margin: auto;">
         <p style="margin-top: 1em;"><strong>At RJCJ, we provide industry-leading tech solutions. Explore exciting career opportunities in IT support and software development.</strong></p>

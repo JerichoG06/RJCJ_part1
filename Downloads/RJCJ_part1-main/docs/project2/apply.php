@@ -1,5 +1,5 @@
 <?php include("includes/header.inc"); ?>
-<?php include("includes/menu.inc"); ?>
+<?php include("includes/navbar.inc"); ?>
 
 <hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
 

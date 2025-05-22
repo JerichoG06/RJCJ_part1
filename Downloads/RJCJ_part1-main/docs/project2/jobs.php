@@ -1,5 +1,5 @@
 <?php include("includes/header.inc"); ?>
-<?php include("includes/menu.inc"); ?>
+<?php include("includes/navbar.inc"); ?>
 
 <hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
 
@@ -27,10 +27,10 @@
                 <h1>RJCJ IT</h1>
                 <nav>
                     <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="jobs.html">Job Descriptions</a></li>
-                    <li><a href="apply.html">Apply Now</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="jobs.php">Job Descriptions</a></li>
+                    <li><a href="apply.php">Apply Now</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="mailto:info@rjcj.com.au">Contact Us</a></li>
                     </ul>
                 </nav>
