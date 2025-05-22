@@ -68,4 +68,16 @@
       <p><strong>Demographics:</strong> We are a diverse group from various cultural backgrounds.</p>
       <p><strong>Hometowns:</strong> Jericho: Werribee, Rishon: Caufield, Jamin: Dandenong, Collins: Footscray</p>
     </section>
+
+    <script>
+        window.addEventListener('scroll', () => {
+          const arrow = document.body;
+          if (window.scrollY > 50) {
+            arrow.style.setProperty('--scroll-indicator-opacity', '0');
+            document.body.style.setProperty('opacity', '1'); // Ensure full visibility
+            document.body.style.setProperty('scroll-behavior', 'smooth');
+            document.body.style.setProperty('--scroll-indicator-visibility', 'hidden');
+          }
+        });
+      </script>
 </main>

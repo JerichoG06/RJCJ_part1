@@ -11,6 +11,16 @@ html {
     overflow-x: hidden;
 }
 
+:root {
+    --highlight-color: #e63946; /* Soft, complementary red for hover and emphasis */
+}
+
+/* Scroll indicator variables */
+:root {
+    --scroll-indicator-opacity: 1;
+    --scroll-indicator-visibility: visible;
+}
+
 body {
     background: #fff;
     font-family: 'Roboto', sans-serif;
@@ -66,22 +76,26 @@ nav {
     margin: 0;
     display: flex;
     justify-content: center;
+    gap: 2em; /* Added spacing between menu items */
     transition: all 0.3s ease;
 }
 
 .menu {
     margin: 0 15px;
+    display: inline-block; /* Ensure spacing is respected */
 }
 
 .menu a {
     font-weight: 500;
     font-size: 16px;
     color: #007aff;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(.4,2,.6,1);
+    transform: scale(1);
 }
 
 .menu a:hover, .menu a:focus {
-    color: #0051a8;
+    color: var(--highlight-color);
+    transform: scale(1.05);
 }
 
 .logo {
@@ -170,3 +184,32 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+body::after {
+    content: "▼";
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: var(--highlight-color);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1.8s infinite ease-in-out;
+    opacity: var(--scroll-indicator-opacity, 1);
+    visibility: var(--scroll-indicator-visibility, visible);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); opacity: 0.5; }
+    50% { transform: translate(-50%, -10px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body::after {
+    will-change: opacity, transform;
+  }
+}
+
