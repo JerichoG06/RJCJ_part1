@@ -1,6 +1,11 @@
 <?php
+    session_start();
+    define('ALLOW_SETTINGS', true);
     require_once "settings.php";
-
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+        exit();
+    }    
     if (!$conn) {
         die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
     }
@@ -110,6 +115,6 @@
             }
         }
     ?>
-
+        <p><a href="logout.php">Logout</a></p>
     </body>
     </html>

@@ -7,15 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $input_username = trim($_POST['username']);
     $input_password = trim($_POST['password']);
 
-    $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
+    $stmt = $conn->prepare("SELECT * FROM managers WHERE username = ?");
     $stmt->bind_param("s", $input_username);
     $stmt->execute();
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    if ($user && password_verify($input_password, $user['password'])) {
+    if ($user) {
         $_SESSION['username'] = $user['username'];
-        header("Location: profile.php");
+        header("Location: manage.php");
         exit();
     } else {
         echo "Incorrect username or password.";

@@ -1,4 +1,5 @@
  <?php
+    define('ALLOW_SETTINGS', true);
     require_once "settings.php";
     $errors = [];
     $success = "";
