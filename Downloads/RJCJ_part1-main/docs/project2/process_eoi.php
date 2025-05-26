@@ -6,22 +6,21 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 define('ALLOW_SETTINGS', true);
-require_once("settings.php"); // adjust path if needed
+require_once("settings.php");
 
 $conn = mysqli_connect($host, $username, $password, $database);
-
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
 }
 
-// === Step 1: Sanitize all inputs ===
+// === Step 1: Sanitize ===
 function sanitise_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     return htmlspecialchars($data);
 }
 
-// Retrieve and sanitize
+// === Step 2: Retrieve & sanitize form data ===
 $jobRef      = sanitise_input($_POST["ref"]);
 $fname       = sanitise_input($_POST["fname"]);
 $lname       = sanitise_input($_POST["lname"]);
@@ -42,7 +41,57 @@ $skill2_linux      = in_array("Linux", $skillsSelected) ? 1 : 0;
 $skill3_networking = in_array("Networking", $skillsSelected) ? 1 : 0;
 $skill4_scripting  = in_array("Scripting", $skillsSelected) ? 1 : 0;
 
-// === Step 2: Create Table if it doesn't exist ===
+// === Step 3: Server-side validation ===
+if (empty($jobRef)) {
+    die("Job reference is required.");
+}
+
+if (!preg_match("/^[A-Za-z]{1,20}$/", $fname)) {
+    die("First name must contain only letters (1–20 chars).");
+}
+
+if (!preg_match("/^[A-Za-z]{1,20}$/", $lname)) {
+    die("Last name must contain only letters (1–20 chars).");
+}
+
+if (!preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) {
+    die("Date of Birth must be in dd/mm/yyyy format.");
+}
+
+if (!in_array($gender, ["Male", "Female", "Other"])) {
+    die("Please select a valid gender.");
+}
+
+if (strlen($address) > 40 || empty($address)) {
+    die("Street address must be 1–40 characters.");
+}
+
+if (strlen($suburb) > 40 || empty($suburb)) {
+    die("Suburb must be 1–40 characters.");
+}
+
+$validStates = ["VIC", "NSW", "QLD", "NT", "WA", "SA", "TAS", "ACT"];
+if (!in_array($state, $validStates)) {
+    die("Invalid state selected.");
+}
+
+if (!preg_match("/^\d{4}$/", $postcode)) {
+    die("Postcode must be 4 digits.");
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    die("Invalid email address.");
+}
+
+if (!preg_match("/^[0-9 ]{8,12}$/", $phone)) {
+    die("Phone must be 8–12 digits or spaces.");
+}
+
+if (!$skill1_windows && !$skill2_linux && !$skill3_networking && !$skill4_scripting) {
+    die("At least one technical skill must be selected.");
+}
+
+// === Step 4: Create table if it doesn't exist ===
 $table_query = "
 CREATE TABLE IF NOT EXISTS eoi (
     EOInumber INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +113,7 @@ CREATE TABLE IF NOT EXISTS eoi (
 )";
 mysqli_query($conn, $table_query);
 
-// === Step 3: Insert Data ===
+// === Step 5: Insert into database ===
 $insert_query = "
 INSERT INTO eoi (
     job_reference_number, first_name, last_name, street_address, suburb_town, state, postcode,
@@ -73,6 +122,9 @@ INSERT INTO eoi (
 ";
 
 $stmt = mysqli_prepare($conn, $insert_query);
+if (!$stmt) {
+    die("Prepare failed: " . mysqli_error($conn));
+}
 
 mysqli_stmt_bind_param(
     $stmt,
@@ -88,7 +140,6 @@ if (mysqli_stmt_execute($stmt)) {
     echo "<h2>Application Successful!</h2>";
     echo "<p>Your EOI Number is: <strong>{$eoiNumber}</strong></p>";
 
-    // Optional: Display selected skills
     $skills = [];
     if ($skill1_windows)    $skills[] = "Windows";
     if ($skill2_linux)      $skills[] = "Linux";
@@ -96,7 +147,6 @@ if (mysqli_stmt_execute($stmt)) {
     if ($skill4_scripting)  $skills[] = "Scripting";
 
     echo "<p><strong>Skills Selected:</strong> " . implode(", ", $skills) . "</p>";
-
 } else {
     echo "<p>Error submitting application: " . mysqli_error($conn) . "</p>";
 }
