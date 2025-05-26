@@ -30,22 +30,27 @@
         }
     }
  ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Manager Registration</title>
+    <title>Register</title>
 </head>
 <body>
-    <h2>Register</h2>
-    <form method="post" action="register.php">
-        <label>Username:
-            <input type="text" name="username" required>
-        </label><br><br>
+<h2>Register</h2>
+<form method="post" action="register.php">
+    <label>Username:
+        <input type="text" name="username" required>
+    </label><br><br>
+    <label>Password:
+        <input type="password" name="password" required>
+    </label><br><br>
+    <label>Confirm Password:
+        <input type="password" name="confirm_password" required>
+    </label><br><br>
+    <input type="submit" value="Register">
+</form>
 
-        <label>Password:
-            <input type="password" name="password" required>
-        </label><br><br>
+<p>Already have an account? <a href="login.php">Login here</a></p>
 
-        <label>Confirm Password:
-            <input type="password" name="confirm_password" required>
-        </label><br><br>
+</body>
+</html>

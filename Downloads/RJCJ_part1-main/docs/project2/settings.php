@@ -3,7 +3,7 @@ if (!defined('ALLOW_SETTINGS')) {
     die('Direct access not permitted.');
 }
 
-$host = "localhost";
+$host = "127.0.0.1";
 $username = "root";
 $password = "";
 $database = "Group05";

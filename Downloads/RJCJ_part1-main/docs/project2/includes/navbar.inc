@@ -6,6 +6,7 @@
                 <li><a href="jobs.php">Job Descriptions</a></li>
                 <li><a href="apply.php">Apply Now</a></li>
                 <li><a href="about.php">About</a></li>
+                <li><a href="login.php">Manager Login</a></li>
                 <li><a href="mailto:info@rjcj.com.au">Contact Us</a></li>
             </ul>
         </nav>
