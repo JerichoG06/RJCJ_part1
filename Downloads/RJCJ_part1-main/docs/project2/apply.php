@@ -4,7 +4,7 @@
 <main style="padding: 2em; max-width: 900px; margin: auto;">
     <h1>Apply for a Position at RJCJ IT</h1>
 
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <form action="process_eoi.php" method="post" novalidate="novalidate">
       <!-- Job Reference -->
       <label for="ref">Job Reference Number:</label>
       <select id="ref" name="ref" required>
@@ -14,6 +14,7 @@
       </select><br><br>
 
       <!-- First & Last Name -->
+
       <label for="fname">First Name:</label>
       <input type="text" id="fname" name="fname" maxlength="20" required><br><br>
 
@@ -68,10 +69,10 @@
       <!-- Skills -->
       <fieldset>
         <legend>Technical Skills:</legend>
-        <input type="checkbox" name="skills" value="Windows" required> Windows
-        <input type="checkbox" name="skills" value="Linux"> Linux
-        <input type="checkbox" name="skills" value="Networking"> Networking
-        <input type="checkbox" name="skills" value="Scripting"> Scripting
+        <input type="checkbox" name="skills[]" value="Windows"> Windows
+        <input type="checkbox" name="skills[]" value="Linux"> Linux
+        <input type="checkbox" name="skills[]" value="Networking"> Networking
+        <input type="checkbox" name="skills[]" value="Scripting"> Scripting
       </fieldset><br>
 
       <label for="otherskills">Other Skills:</label><br>
