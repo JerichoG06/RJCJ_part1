@@ -62,11 +62,7 @@ $result = $conn->query($sql);
                                 <p><strong>Date Posted:</strong> <?php echo htmlspecialchars($job['date_posted']); ?></p>
                             <?php endif; ?>
                         </div>
-                        <!--
-                          You can add more dynamic sections here like qualifications, responsibilities if you add those columns in your DB.
-                          For now, those are static content in your original page. 
-                          If you want to store those in DB, you'd need to update your schema and code accordingly.
-                        -->
+                        
                     </section>
                     <br>
                     <?php
