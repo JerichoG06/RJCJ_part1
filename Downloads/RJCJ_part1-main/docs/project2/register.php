@@ -23,7 +23,7 @@
             $insert = $conn->prepare("INSERT INTO managers (username, password) VALUES (?, ?)");
             $insert->bind_param("ss", $username, $hashedPassword);
                 if($insert->execute()){
-                    $success = "Manager registered successfully."
+                    $success = "Manager registered successfully.";
                 } else{
                     $errors[] = "Database error: " . $conn->error;
                 }
