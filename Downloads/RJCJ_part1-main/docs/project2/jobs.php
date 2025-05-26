@@ -44,7 +44,7 @@
                         <div class="job-title">
                             <h2>IT Support Technician</h2>
                         </div>
-                        <div class="job-reference">Reference Number: RJC23</div>
+                        <div class="job-reference">Reference Number: IT5T9</div>
                     </div>
                     <br>
                     <div class="JD">
@@ -95,7 +95,7 @@
                         <div class="job-title">
                             <h2>Cybersecurity Specialist</h2>
                         </div>
-                        <div class="job-reference">Reference Number: CS947</div>
+                        <div class="job-reference">Reference Number: SW3NG</div>
                     </div>
                     <br>
                     <div class="JD cybersecurity">
