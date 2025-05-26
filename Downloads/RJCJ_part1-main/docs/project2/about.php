@@ -81,3 +81,5 @@
         });
       </script>
 </main>
+
+<?php include("includes/header.inc"); ?>

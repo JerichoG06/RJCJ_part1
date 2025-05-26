@@ -1,3 +1,4 @@
+<?php include("includes/header.inc"); ?>
 <?php include("includes/navbar.inc"); ?>
 
 <main style="padding: 2em; max-width: 900px; margin: auto;">
