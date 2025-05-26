@@ -351,6 +351,7 @@ form label, form legend {
 }
 
 form input[type="text"],
+form input[type="password"],
 form input[type="email"],
 form select,
 form textarea {

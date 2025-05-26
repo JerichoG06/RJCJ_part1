@@ -42,7 +42,7 @@
         <!-- FORM to change status -->
         <form method="post">
             <label>EOI Number: <input type="text" name="eoi_number"></label>
-            <label>New Status: <input type="text" name="new_status"></label>
+            <label>New Status: (New,Current,Final) <input type="text" name="new_status"></label>
             <input type="submit" name="update_status" value="Update Status">
         </form><br>
         <!-- FORM to sort EOIs by selected field -->
@@ -62,14 +62,14 @@
     <?php
         // 1. List All EOIs
         if (isset($_POST['list_all'])) {
-            $query = "SELECT EOInumber, job_reference_number, first_name, last_name, street_address, suburb_town, state, postcode, email, phone, other_skills FROM eoi";
+            $query = "SELECT EOInumber, job_reference_number, first_name, last_name, street_address, suburb_town, state, postcode, email, phone, status FROM eoi";
             $result = mysqli_query($conn, $query);
             showResults($result);
         }
         // 2. List by Job Reference Number
         if (isset($_POST['list_by_job'])) {
             $job_ref = mysqli_real_escape_string($conn, $_POST['job_ref']);
-            $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, other_skills FROM eoi WHERE job_reference_number = '$job_ref'";
+            $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, status FROM eoi WHERE job_reference_number = '$job_ref'";
             $result = mysqli_query($conn, $query);
             showResults($result);
         }
@@ -81,7 +81,7 @@
             if (!empty($fname)) $conditions[] = "first_name = '$fname'";
             if (!empty($lname)) $conditions[] = "last_name = '$lname'";
             $where = implode(" AND ", $conditions);
-            $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, other_skills FROM eoi WHERE $where";
+            $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, status FROM eoi WHERE $where";
             $result = mysqli_query($conn, $query);
             showResults($result);
         }
@@ -114,7 +114,7 @@
             $field = $_POST['sort_field'];
 
             if (in_array($field, $allowed_fields)) {
-                $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, other_skills FROM eoi ORDER BY $field";
+                $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, status FROM eoi ORDER BY $field";
                 $result = mysqli_query($conn, $query);
                 showResults($result);
             } else {
