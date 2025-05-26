@@ -72,7 +72,7 @@
             $query = "DELETE FROM eoi WHERE job_reference_number = '$del_ref'";
             if(mysqli_query($conn, $query)){
                 echo "<p>Deleted EOIs with job reference: $del_ref</p>";
-            } else {
+            } else { 
                 echo "<p>Error deleting: " . mysqli_error($conn) . "</p>";
             }
         }
