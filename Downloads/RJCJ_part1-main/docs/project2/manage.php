@@ -15,6 +15,7 @@
     <html>
     <head>
         <title>Manage EOIs</title>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
     </head>
     <body>
         <h2>Manage EOIs</h2>
@@ -44,6 +45,19 @@
             <label>New Status: <input type="text" name="new_status"></label>
             <input type="submit" name="update_status" value="Update Status">
         </form><br>
+        <!-- FORM to sort EOIs by selected field -->
+        <form method="post">
+                <label>Sort EOIs by:
+                    <select name="sort_field">
+                        <option value="EOInumber">EOI Number</option>
+                        <option value="job_reference_number">Job Reference</option>
+                        <option value="first_name">First Name</option>
+                        <option value="last_name">Last Name</option>
+                        <option value="status">Status</option>
+                    </select>
+                </label>
+                <input type="submit" name="sort_eois" value="Sort">
+            </form><br>
 
     <?php
         // 1. List All EOIs
@@ -91,6 +105,20 @@
                 echo "<p>Status updated for EOI: $eoi_num</p>";
             } else {
                 echo "<p>Error updating status: " . mysqli_error($conn) . "</p>";
+            }
+        }
+
+        // 6. Sort EOIs by selected field
+        if (isset($_POST['sort_eois'])) {
+            $allowed_fields = ['EOInumber', 'job_reference_number', 'first_name', 'last_name', 'status'];
+            $field = $_POST['sort_field'];
+
+            if (in_array($field, $allowed_fields)) {
+                $query = "SELECT * FROM eoi ORDER BY $field";
+                $result = mysqli_query($conn, $query);
+                showResults($result);
+            } else {
+                echo "<p>Invalid sort field selected.</p>";
             }
         }
 
