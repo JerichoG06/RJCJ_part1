@@ -1,9 +1,6 @@
-<?php include("includes/header.inc"); ?>
 <?php include("includes/navbar.inc"); ?>
 
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 1em auto;" />
-
-<main style="padding: 2em; max-width: 900px; margin: auto;">
+<main>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -13,31 +10,15 @@
         <meta name="keywords" content="RJCJ IT, Job, Application, Opportunities, Home">
         <meta name="author" content="JG, RS, JP, CM">
         <title>RJCJ IT</title>
-        <link rel="stylesheet" type="text/css" href="styles//styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
     </head>
     <body>
         <div id="header">
             <header>
-                <div>
-                    <figure id="image1">
-                        <a href="images/rjcj.png">  <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb" style="width:100px; height:auto;"></a>
-                    </figure>
-                </div>
-                <h1>RJCJ IT</h1>
-                <nav>
-                    <ul class="nav-menu">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="jobs.php">Job Descriptions</a></li>
-                    <li><a href="apply.php">Apply Now</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="mailto:info@rjcj.com.au">Contact Us</a></li>
-                    </ul>
-                </nav>
                 <hr>
-                <h2 style=text-align:center;>Job Opportunities</h2>
+                <h2>Job Opportunities</h2>
                 <aside id="WTG"> <!-- Defines a sidebar section with an id "WTG" for styling or scripting purposes -->
-                    <p style=text-align:center;>Steps to take</p>
+                    <p>Steps to take</p>
                     <ol> <!-- Ordered list of steps to guide users through the application process -->
                         <li>Read the below information about what qualifications and experience is needed</li>
                         <li>Click About in the navagation bar to learn more about the company</li>
@@ -58,20 +39,20 @@
                 <br>
                 <br>
                 <section> <!-- Defines a section for displaying the job position information -->
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div style="width: 33%;"></div> 
-                        <div style="text-align: center; width: 33%;">
-                            <h2 style="margin: 0; color: #14fff7; text-shadow: 0px 0px 20px #14fff7;">IT Support Technician</h2>
+                    <div class="job-header">
+                        <div></div> 
+                        <div class="job-title">
+                            <h2>IT Support Technician</h2>
                         </div>
-                        <div style="text-align: right; width: 33%; font-size:12px; color: #14fff7;">Reference Number: RJC23</div>
+                        <div class="job-reference">Reference Number: RJC23</div>
                     </div>
                     <br>
                     <div class="JD">
                         <p>RJCJ is seeking a reliable and technically skilled IT Support Technician to provide front-line support to end-users, troubleshoot hardware and software issues, and ensure the smooth daily operation of IT systems across the organization.</p>
-                        <p>The annual salary range is from $55,000-$68,000 AUD and you will report to your senor IT manager; Jordan Blake</p>
+                        <p>The annual salary range is from $55,000-$68,000 AUD and you will report to your senior IT manager; Jordan Blake</p>
                     </div>
                     <aside class="KR">
-                        <p style=text-align:center;>Key Responsibilities</p>
+                        <p>Key Responsibilities</p>
                         <ul>
                             <li>Provide first-level technical support via phone, email, and in person</li>
                             <li>Install, configure, and maintain computer hardware and software</li>
@@ -84,20 +65,20 @@
                         </ul>
                     </aside>
                     <br>
-                    <h2 style="font-size:small; color:#14fff7; text-shadow:0 0 20px #14fff7;">Required Qualifications, Skills, Knowledge & Attributes</h2>
+                    <h2 class="qualifications-title">Required Qualifications, Skills, Knowledge & Attributes</h2>
                     <aside class="RQSKAE">
-                        <p style=text-align:center;>Essesntial</p>
+                        <p>Essesntial</p>
                         <ul>
                             <li>Certificate IV or higher in Information Technology or a related field</li>
                             <li>Minimum 1 year experience in an IT support/helpdesk role</li>
-                            <li>Strong knowledge of Windows and macOS operating systems</li>
+                            <li>Strong knowledge of Windows, Linux and macOS operating systems</li>
                             <li>Familiarity with Microsoft Office Suite and basic networking concepts</li>
                             <li>Excellent problem-solving skills and attention to detail</li>
                             <li>Good communication and interpersonal skills</li>
                         </ul>
                     </aside>
                     <aside class="RQSKAP">
-                        <p style=text-align:center;>Preferable</p>
+                        <p>Preferable</p>
                         <ul>
                             <li>Experience with Active Directory and Office 365 administration</li>
                             <li>Familiarity with basic scripting (e.g., PowerShell or Bash)</li>
@@ -107,22 +88,22 @@
                         </ul>
                     </aside>
                 </section>
-                <section style="clear:both;"> <!-- Clears any floating elements (e.g., floats left or right) that may have affected layout, ensuring that the current element is positioned below any previous floated elements -->
+                <section class="clear-section"> <!-- Clears any floating elements (e.g., floats left or right) that may have affected layout, ensuring that the current element is positioned below any previous floated elements -->
                     <br>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div style="width: 33%;"></div> 
-                        <div style="text-align: center; width: 33%;">
-                            <h2 style="margin: 0; color: #0cf24d; text-shadow: 0px 0px 20px #0cf24d;">Cybersecurity Specialist</h2>
+                    <div class="job-header">
+                        <div></div> 
+                        <div class="job-title">
+                            <h2>Cybersecurity Specialist</h2>
                         </div>
-                        <div style="text-align: right; width: 33%; font-size:12px; color: #0cf24d;">Reference Number: CS947</div>
+                        <div class="job-reference">Reference Number: CS947</div>
                     </div>
                     <br>
-                    <div class="JD" style="color:#0cf24d;">
+                    <div class="JD cybersecurity">
                         <p>We are seeking a proactive and highly skilled Cybersecurity Specialist to join our team. This role is vital in protecting our digital assets, ensuring the confidentiality, integrity, and availability of our systems and data.</p>
-                        <p>The annual salary range is from £42,000 – £60,000 AUD and you will report to the Head of Information Security; Riley Chen</p>
+                        <p>The annual salary range is from $42,000 – $60,000 AUD and you will report to the Head of Information Security; Riley Chen</p>
                     </div>
                     <aside class="KR">
-                        <p style=text-align:center;>Key Responsibilities</p>
+                        <p>Key Responsibilities</p>
                         <ul>
                             <li>Monitor and respond to security incidents and threats in real time</li>
                             <li>Conduct regular vulnerability assessments and penetration tests</li>
@@ -134,9 +115,9 @@
                         </ul>
                     </aside>
                     <br>
-                    <h2 style="font-size:small; color:#0cf24d; text-shadow:0 0 20px #0cf24d;">Required Qualifications, Skills, Knowledge & Attributes</h2>
+                    <h2 class="qualifications-title cybersecurity">Required Qualifications, Skills, Knowledge & Attributes</h2>
                     <aside class="RQSKAE">
-                        <p style=text-align:center;>Essesntial</p>
+                        <p>Essesntial</p>
                         <ul>
                             <li>Bachelor’s degree in Cybersecurity, Computer Science, or a related field</li>
                             <li>At least 2 years of experience in a cybersecurity or IT security role</li>
@@ -148,7 +129,7 @@
                         </ul>
                     </aside>
                     <aside class="RQSKAP">
-                        <p style=text-align:center;>Preferable</p>
+                        <p>Preferable</p>
                         <ul>
                             <li>Certifications such as CompTIA Security+, CEH, or CISSP</li>
                             <li>Experience with cloud platforms (AWS, Azure) and their security practices</li>
@@ -157,21 +138,31 @@
                         </ul>
                     </aside>
                 </section>
-                <section style="clear:both; font-size:medium; display: block; margin-bottom: 50px;">
+                <section class="final-message">
                     <br>
                     <h3>If you're ready to take the next step in your IT career and make a real impact, don’t miss this opportunity — apply now and become a part of our innovative and growing team!</h3>
                 </section>
-                
             </header>
         </div>
-        <footer style="background: radial-gradient(circle at center, #0401BE, #000000);">
+
+        <script>
+        window.addEventListener('scroll', () => {
+          const arrow = document.body;
+          if (window.scrollY > 50) {
+            arrow.style.setProperty('--scroll-indicator-opacity', '0');
+            document.body.style.setProperty('opacity', '1'); // Ensure full visibility
+            document.body.style.setProperty('scroll-behavior', 'smooth');
+            document.body.style.setProperty('--scroll-indicator-visibility', 'hidden');
+          }
+        });
+      </script>
+
+        <footer>
             <div>
                 <div>&copy; 2025 RJCJ Technologies</div>
-                <div><a href="https://jericho06.atlassian.net/jira/software/projects/RJCJ/summary" style="color: #fa269e; text-decoration: none;" target="_blank">Jira Project</a></div>
+                <div><a href="https://jericho06.atlassian.net/jira/software/projects/RJCJ/summary" target="_blank">Jira Project</a></div>
             </div>
         </footer>
     </body>
     </html>
 </main>
-<hr style="border: none; border-top: 2px solid #fa269e; width: 60%; margin: 2em auto;" />
-<?php include("includes/footer.inc"); ?>
