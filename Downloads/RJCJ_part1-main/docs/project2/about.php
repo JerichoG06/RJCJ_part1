@@ -69,6 +69,21 @@
       <p><strong>Hometowns:</strong> Jericho: Werribee, Rishon: Caufield, Jamin: Dandenong, Collins: Footscray</p>
     </section>
 
+    <h3 class="section-subtitle">🛠️ Members Contributions</h3>
+      <dl>
+        <dt><strong>Jericho Gonzalez</strong></dt>
+        <dd>Backend Developer – Created <code>settings.php</code>, set up the SQL database, and built <code>manage.php</code> for managing EOIs.</dd>
+
+        <dt><strong>Rishon Sunil</strong></dt>
+        <dd>Frontend Developer – Refactored HTML into PHP, integrated headers and navbars, and authored <code>styles.css</code>. Also documented team contributions in <code>about.php</code>.</dd>
+
+        <dt><strong>Jamin Petruccelli</strong></dt>
+        <dd>Form Developer – Developed <code>process_eoi.php</code>, updated <code>apply.php</code>, and provided EOI table structure to backend.</dd>
+
+        <dt><strong>Collins Menghong</strong></dt>
+        <dd>Presentation & QA – Created the PowerPoint pitch deck and reviewed the project for formatting, accuracy, and consistency.</dd>
+      </dl>
+
     <script>
         window.addEventListener('scroll', () => {
           const arrow = document.body;
