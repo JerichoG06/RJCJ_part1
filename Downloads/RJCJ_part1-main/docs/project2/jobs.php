@@ -72,7 +72,7 @@ $result = $conn->query($sql); // Execute the query and store the result
             </section>
         </header>
     </div>
-    
+     
 </body>
 </html>
 
