@@ -42,7 +42,7 @@
         <!-- FORM to change status -->
         <form method="post">
             <label>EOI Number: <input type="text" name="eoi_number"></label>
-            <label>New Status: (New,Current,Final) <input type="text" name="new_status"></label>
+            <label>New Status: (New,Current,) <input type="text" name="new_status"></label>
             <input type="submit" name="update_status" value="Update Status">
         </form><br>
         <!-- FORM to sort EOIs by selected field -->

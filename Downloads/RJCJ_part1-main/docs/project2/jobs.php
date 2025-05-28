@@ -1,4 +1,5 @@
 <?php 
+include("includes/header.inc");
 include("includes/navbar.inc"); 
 
 // Fetch all jobs from the database
@@ -10,15 +11,7 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RJCJ IT Job Page">
-    <meta name="keywords" content="RJCJ IT, Job, Application, Opportunities, Home">
-    <meta name="author" content="JG, RS, JP, CM">
-    <title>RJCJ IT</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-</head>
+
 <body>
     <div id="header">
         <header>
@@ -92,11 +85,8 @@ $result = $conn->query($sql);
         });
     </script>
 
-    <footer>
-        <div>
-            <div>&copy; 2025 RJCJ Technologies</div>
-            <div><a href="https://jericho06.atlassian.net/jira/software/projects/RJCJ/summary" target="_blank">Jira Project</a></div>
-        </div>
-    </footer>
+
 </body>
 </html>
+
+<?php include("includes/footer.inc"); ?>
