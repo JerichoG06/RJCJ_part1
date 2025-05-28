@@ -22,8 +22,8 @@
         <header>
 
           <figure class="logo">
-            <a href="images/rjcj.png">
-              <img src="images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
+            <a href="styles/images/rjcj.png">
+              <img src="styles/images/rjcj.png" alt="RJCJ logo" title="filesize 232kb">
             </a>
           </figure>
           
