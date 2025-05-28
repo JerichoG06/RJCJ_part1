@@ -4,7 +4,7 @@ include("includes/navbar.inc");
 // Fetch all jobs from the database
 define('ALLOW_SETTINGS', true);
 require_once("settings.php");
-$sql = "SELECT job_reference_number, job_title, job_description, location, date_posted, title FROM jobs";
+$sql = "SELECT job_reference_number, job_title, job_description, location, date_posted FROM jobs";
 $result = $conn->query($sql);
 ?>
 
