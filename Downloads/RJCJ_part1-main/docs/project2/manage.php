@@ -107,41 +107,54 @@
                 echo "<p>Error updating status: " . mysqli_error($conn) . "</p>";
             }
         }
+// 6. Sort EOIs by selected field
+if (isset($_POST['sort_eois'])) {
+    // Check if the form was submitted with a request to sort EOIs
 
-        // 6. Sort EOIs by selected field
-        if (isset($_POST['sort_eois'])) {
-            $allowed_fields = ['EOInumber', 'job_reference_number', 'first_name', 'last_name', 'status'];
-            $field = $_POST['sort_field'];
+    $allowed_fields = ['EOInumber', 'job_reference_number', 'first_name', 'last_name', 'status'];
+    // Define a whitelist of allowed fields that can be used for sorting
+    $field = $_POST['sort_field'];
+    // Get the selected field from the submitted form (e.g., from a dropdown)
+    if (in_array($field, $allowed_fields)) {
+        // Check that the selected field is in the allowed list before using it in the SQL query
+        $query = "SELECT EOInumber, job_reference_number, first_name, last_name, street_address, suburb_town, state, postcode, email, phone, status FROM eoi ORDER BY $field";
+        // Construct an SQL query to select all relevant fields from the 'eoi' table
+        // and sort the results by the selected field
+        $result = mysqli_query($conn, $query);
+        // Execute the SQL query and store the result
+        showResults($result);
+        // Call a function (presumably defined elsewhere) to display the query results in a formatted way
+    } else {
+        echo "<p>Invalid sort field selected.</p>";
+        // If the selected field is not allowed, show an error message
+    }
+}
 
-            if (in_array($field, $allowed_fields)) {
-                $query = "SELECT EOInumber, job_reference_number, first_name, last_name,street_address, suburb_town, state, postcode, email, phone, status FROM eoi ORDER BY $field";
-                $result = mysqli_query($conn, $query);
-                showResults($result);
-            } else {
-                echo "<p>Invalid sort field selected.</p>";
+
+       // Helper function to display results
+function showResults($result) {
+    // Check if the result is valid and contains rows
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "<table border='1'><tr>"; // Start an HTML table with a border and begin the header row
+        while ($field = mysqli_fetch_field($result)) { // Loop through each field (column) in the result set
+            echo "<th>{$field->name}</th>"; // Output the column name as a table header cell
+        }
+        echo "</tr>"; // Close the header row
+
+        while ($row = mysqli_fetch_assoc($result)) { // Loop through each row in the result set
+            echo "<tr>";
+            foreach ($row as $val) { // Loop through each value in the row
+                echo "<td>" . htmlspecialchars($val) . "</td>"; // Output the value in a table cell, using htmlspecialchars to prevent XSS
             }
+            echo "</tr>"; // Close the table row
         }
 
-        // Helper function to display results
-        function showResults($result){
-            if ($result && mysqli_num_rows($result) > 0){
-                echo "<table border='1'><tr>";
-                while ($field = mysqli_fetch_field($result)){
-                    echo "<th>{$field->name}</th>";
-                }
-                echo "</tr>";
-                while ($row = mysqli_fetch_assoc($result)){
-                    echo "<tr>";
-                    foreach ($row as $val){
-                        echo "<td>" . htmlspecialchars($val) . "</td>";
-                    }
-                    echo "</tr>";
-                }
-                echo "</table>";
-            } else {
-                echo "<p>No results found.</p>";
-            }
-        }
+        echo "</table>"; // End the HTML table
+    } else {
+        echo "<p>No results found.</p>"; // If no rows were found or the query failed, display a message
+    }
+}
+
     ?>
         <p><a href="logout.php">Logout</a></p>
     </body>
