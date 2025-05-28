@@ -94,7 +94,9 @@
             document.body.style.setProperty('--scroll-indicator-visibility', 'hidden');
           }
         });
-      </script>
+    </script>
+<p>To view the modern features and UI upgrades we implemented, check out our 
+   <a href="enhancements.php">Enhancements</a> page.</p>
 </main>
 
 <?php include("includes/footer.inc"); ?>
