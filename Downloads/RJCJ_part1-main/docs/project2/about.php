@@ -38,7 +38,7 @@
       <h3 class="section-subtitle">🖼️ Group Photo</h3>
       <div class="centered">
         <figure class="group-photo">
-          <img src="images/IMG_0458.JPEG" alt="Our Group" width="579" height="772" />
+          <img src="styles/images/IMG_0458.JPEG" alt="Our Group" width="579" height="772" />
           <figcaption><em>Our Group Picture</em></figcaption>
         </figure>
       </div>
