@@ -45,4 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Check if the form was submitted u
 <p>Don't have an account? <a href="register.php">Register here</a></p>
 <!-- Link to registration page -->
 </body>
+
+<script>
+        window.addEventListener('scroll', () => {
+          const arrow = document.body;
+          if (window.scrollY > 50) {
+            arrow.style.setProperty('--scroll-indicator-opacity', '0');
+            document.body.style.setProperty('opacity', '1'); // Ensure full visibility
+            document.body.style.setProperty('scroll-behavior', 'smooth');
+            document.body.style.setProperty('--scroll-indicator-visibility', 'hidden');
+          }
+        });
+      </script>
 </html>
