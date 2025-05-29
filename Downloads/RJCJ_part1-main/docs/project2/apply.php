@@ -90,4 +90,16 @@
     </form>
 </main>
 
+<script>
+        window.addEventListener('scroll', () => {
+          const arrow = document.body;
+          if (window.scrollY > 50) {
+            arrow.style.setProperty('--scroll-indicator-opacity', '0');
+            document.body.style.setProperty('opacity', '1'); // Ensure full visibility
+            document.body.style.setProperty('scroll-behavior', 'smooth');
+            document.body.style.setProperty('--scroll-indicator-visibility', 'hidden');
+          }
+        });
+ </script>
+
 <?php include("includes/footer.inc"); ?>
